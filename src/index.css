@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  --background: 38 33% 95%;
+  --foreground: 220 15% 18%;
+  --card: 38 30% 97%;
+  --card-foreground: 220 15% 18%;
+  --popover: 38 30% 97%;
+  --popover-foreground: 220 15% 18%;
+  --primary: 145 26% 38%;
+  --primary-foreground: 38 33% 95%;
+  --secondary: 38 20% 90%;
+  --secondary-foreground: 220 15% 18%;
+  --muted: 38 15% 92%;
+  --muted-foreground: 220 10% 46%;
+  --accent: 36 90% 55%;
+  --accent-foreground: 220 15% 18%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 38 15% 85%;
+  --input: 38 15% 85%;
+  --ring: 145 26% 38%;
+  --radius: 0.75rem;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Aplicamos las fuentes globales en el body */
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+}
+
+/* Ajustes nativos para scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 999px; }
+
+/* El patrón de césped del campo de fútbol */
+.pitch-pattern {
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255,255,255,0.03) 20px, rgba(255,255,255,0.03) 40px);
+}
