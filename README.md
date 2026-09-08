@@ -1,16 +1,30 @@
-# React + Vite
+# ⚽ Goat-XI — Web App Football Simulation & Draft
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Goat-XI** es una aplicación web interactiva de simulación de fútbol desarrollada con una arquitectura desacoplada (**Headless CMS**). El sistema combina una interfaz reactiva en el frontend con una base de datos histórica alojada en WordPress, permitiendo a los usuarios configurar tácticas, realizar drafts de jugadores históricos de LaLiga y simular partidos mediante un algoritmo estadístico.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Características Principales
 
-## React Compiler
+- **Draft Interactivo de Jugadores:** Elección aleatoria de futbolistas de distintas épocas y equipos de LaLiga (por ejemplo, comparar a un jugador del Valencia 2001 con uno del Deportivo de La Coruña 2002).
+- **Gestión Táctica:** Configuración dinámica de la formación antes de iniciar el draft (modos ofensivo, defensivo, etc.).
+- **Algoritmo de Simulación:** Cálculo probabilístico de resultados, goles y eventos en base a las valoraciones medias de los 11 titulares frente a 19 equipos rivales históricos.
+- **Arquitectura Desacoplada:** Frontend ligero conectado mediante API REST a un panel de administración en WordPress.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Stack Tecnológico
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React.js, JavaScript (ES6+), Vite.
+- **Backend (Headless CMS):** WordPress alojado en servidor de producción (Hostinger).
+- **API & Datos:** WordPress REST API para la entrega de datos de jugadores, medias por temporada y escudos.
+- **Estilos & UI:** CSS3 responsive / Componentes interactivos.
+
+---
+
+## ⚙️ Arquitectura del Sistema
+
+┌─────────────────────────┐          REST API          ┌─────────────────────────┐
+│     React Frontend      │  ◄──────────────────────►  │  WordPress Headless CMS │
+│ (Draft, Tácticas, UI)   │    (Peticiones HTTP)       │ (Base de datos jug.)    │
+└─────────────────────────┘                            └─────────────────────────┘
